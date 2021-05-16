@@ -4,25 +4,53 @@ Estimated time: 45 minutes
 Total points: 45 */
 let books = [
     {
-        name: 'Good',
-        price: '15CHF',
-        isSold: true
+        name: "Wizard of OZ, The",
+        soldOut: true,
+        price: 49.99
     },
     {
-        name: 'Morning',
-        price: '20CHF',
-        isSold: true
+        name: "Harry Potter chapter 1",
+        soldOut: true,
+        price: 39.99
     },
     {
-        name: 'Everyone',
-        price: '9CHF',
-        isSold: false
+        name: "Pictures of Chile",
+        soldOut: false,
+        price: 89.99
     }
-];
+]
 
-books.sort((a,b)=>{a.name.localeCompare(b.name)});
-let showBook = document.querySelector('section');
-books.forEach(value =>{
-    let h2 = document.createElement('h2');
-    h2 = value.name;
+let section = document.getElementById("listofbooks");
+
+function displayBooks(){
+    section.innerHTML = "";
+    books.sort(function(a,b){
+        return a.name.localeCompare(b.name)
+    });
+    books.forEach(function(value,index) {
+        let article = document.createElement("article");
+        let h1 = document.createElement("h1")
+        let details = document.createElement("p")
+        h1.innerText = value.name;
+        details.innerText = "Price " + value.price + "CHF "
+        if (value.soldOut) {
+            details.innerHTML = details.innerText + "/ This product is <strong>not available</strong>"
+        } else {
+            details.innerHTML = details.innerText + "/ This product is <strong><i>available<i></strong>!"
+        }
+        article.appendChild(h1);
+        article.appendChild(details);
+        section.appendChild(article);
+
+    })
+}
+
+
+let bookName = document.getElementById("bookname");
+let bookPrice = document.getElementById("bookprice");
+let bookSoldOut = document.getElementById("booksoldout")
+displayBooks();
+document.getElementById("addbook").addEventListener("click",function(){
+    books.push.apply(books, {name: bookName.value , price: bookPrice.value , soldOut: bookSoldOut.value })
+    displayBooks();
 })
