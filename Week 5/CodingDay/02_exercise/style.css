@@ -1,0 +1,102 @@
+html {
+    box-sizing: border-box;
+    font-size: 0.625em;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+a{  
+    font-size: 1rem;
+    text-decoration: none;
+    color: grey;
+}
+
+ul{
+    list-style: none;
+}
+
+header {
+    border-bottom: gray solid 1px;
+    margin-top: 1rem;
+}
+
+h1{
+    display: inline-block;
+    font-style: italic;
+    position: relative;
+    top: -0.8rem;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+nav li {
+    width:15rem;
+    border-bottom: grey solid 1px;
+    padding: 1rem;
+}
+
+section {
+    border-left: grey solid 1px;
+    border-right: grey solid 1px;
+    background-color: rgb(238, 235, 235);
+    flex: auto;
+}
+
+article {
+    background-color: #fff;
+    width: 90%;
+    margin: 2rem auto 0 auto;
+}
+
+h2 {
+    color: lightgreen;
+    padding: 1.5rem 0 1rem 1rem;
+}
+
+p{
+    color: grey;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+aside {
+    width: 8rem;
+}
+
+aside li {
+    border: gray solid 1px;
+    font-size: 1rem;
+    margin: 1rem auto 0 auto;
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+    padding: 2rem;
+}
+footer {
+    background-color: black;
+    text-align: right;
+}
+footer ul {
+    margin: 1rem;
+}
+footer a {
+    color: #fff;
+}

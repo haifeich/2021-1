@@ -1,0 +1,92 @@
+html {
+    box-sizing: border-box;
+    font-size: 0.625em;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(189, 243, 243);
+}
+label  {
+    border: #acabab solid 2px;
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    margin: 0 5rem 2rem 5rem;
+}
+label:hover {
+    background-color: #f44336;
+    color: #fff;
+}
+section {
+    background-color: #fff;
+    border: #3f3f3f solid 0.3rem;
+    position: relative;
+    margin: 0 5vh;   
+}
+input {
+    position:absolute;
+    margin: 1.5rem 0 0 2rem;
+}
+h1 {
+    margin: 25vh auto 4vh auto;
+    text-align: center;
+}
+p {
+    width: 50%;
+    margin: 10vh auto;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(106, 91, 192); 
+    color: black; 
+    border: 2px solid #f44336;
+    border: none;
+    padding: 1.5rem 3rem;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    margin: 2rem auto;
+    transition-duration: 0.7s;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: #f44336;
+    color: white;
+  }
+
+#first {
+    border: none;
+    margin: 2rem auto 2rem 0;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.5;
+}
+#first:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.hidden {
+    display: none;
+  }
+
+/*FOR BIGGER SCREEN*/
+@media screen and (min-width: 40em){
+    section{
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
